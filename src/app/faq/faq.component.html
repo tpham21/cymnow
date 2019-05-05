@@ -1,0 +1,30 @@
+<div class="faq">
+	<div class="faq-container">
+		<div class="column-flex" *ngFor="let temp of template.contents; let i= index">
+			<div  class="container row-flex" [ngClass]="{'faq-selected': temp.selected}" (click)="selected = (selected==i)?-1:i">
+				<div class="question">
+					<div>{{temp.question.text}}</div>
+				</div>
+				
+				<div class="faq-icon">
+					<mat-icon *ngIf="selected==i">keyboard_arrow_up</mat-icon>
+					<mat-icon *ngIf="selected!=i">keyboard_arrow_down</mat-icon>
+				</div>
+			</div>
+
+			<div *ngIf="temp.is_array" [ngClass]="{'active-answer': selected==i}" class="answer1">
+				<div class="card-container" horizontal-scroll>
+					<div class="card-content">
+						<div *ngFor="let card of temp.answer;" class="card-component">
+							<card2 [template] = "card" ></card2>
+						</div>
+					</div>
+				</div>				
+			</div>
+
+
+			<div *ngIf="!temp.is_array" [ngClass]="{'active-answer': selected==i}" class="answer2 row-flex">{{temp.answer.text}}</div>
+			<mat-divider></mat-divider>
+		</div>
+	</div>
+</div>

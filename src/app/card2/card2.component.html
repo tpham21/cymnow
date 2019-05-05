@@ -1,0 +1,26 @@
+<div class="card2" id="card2">
+		<div class="image-container" [ngStyle]="{'height': selectedTemplate.version?'50%':'100%'}">
+			<img src="{{selectedTemplate.image}}" class="card-image" *ngIf="selectedTemplate.image" [ngStyle]="selectedTemplate.imageStyle">
+		    <div class="image-content" *ngIf="!selectedTemplate.version">
+		    	<div class="column-flex">
+			    	<header1 *ngIf="selectedTemplate.header" [template]="selectedTemplate.header"></header1>
+					<div class="row-flex content">
+						<div *ngIf="selectedTemplate.title" class="title" [ngStyle] = "selectedTemplate.title.style">{{selectedTemplate.title.text}}</div>
+						<div class="sub-content">
+							<div *ngIf="selectedTemplate.description" class="description" [ngStyle] = "selectedTemplate.description.style">{{selectedTemplate.description.text}}</div>
+							<button1 *ngIf="selectedTemplate.button" [template]="selectedTemplate.button"></button1>
+						</div>
+					</div>
+				</div>
+		    </div>
+		</div>
+	    <div class="text-container" *ngIf="selectedTemplate.version">
+	    	<div *ngIf="selectedTemplate.title">
+		            <span class="" [ngStyle] = "selectedTemplate.title.style">{{selectedTemplate.title.text}}</span>
+		            <hr class="divider" *ngIf="selectedTemplate.header || selectedTemplate.description">
+		            <span  *ngIf="selectedTemplate.header" class="header" [ngStyle] = "selectedTemplate.header.style">{{selectedTemplate.header.text}}</span>
+		    </div>
+
+		    <div *ngIf="selectedTemplate.description" class="description" >{{selectedTemplate.description.text}}</div>
+	    </div>
+</div>

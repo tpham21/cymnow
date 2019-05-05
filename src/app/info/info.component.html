@@ -1,0 +1,12 @@
+<div class="column-flex info" [ngStyle] = "template.style">
+	<div class="column-flex container">
+		<header1 *ngIf="template.header" [template]="template.header"></header1>
+		<div class="row-flex content">
+			<div class="title" [ngStyle] = "template.title.style">{{template.title.text}}</div>
+			<div class="sub-content">
+				<div class="description" [ngStyle] = "template.description.style">{{template.description.text}}</div>
+				<button1 *ngIf="template.button" [template]="template.button"></button1>
+			</div>
+		</div>
+	</div>
+</div>

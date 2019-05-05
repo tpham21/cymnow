@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+body{
+	font-family: 'font1', sans-serif;
+	margin:0px !important;
+}
+
+.flex-empty{
+	width:100%;
+}
+ 
+ .font2{
+    font-family: 'font2', sans-serif !important;
+
+ }
+
+ .font3{
+    font-family: 'Karla', sans-serif !important;
+
+ }
+
+.row-flex{
+	display:flex;
+	flex-flow: row wrap;
+}
+
+.column-flex{
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.column-empty{
+	flex-grow: flex;
+}
+
+*:focus {
+    outline: none;
+}
+
+.body{
+	background-color: #fff;
+}
+
+.zoom-in{
+	animation-fill-mode: forwards;
+	animation: scaleIn 5s linear;
+    -webkit-animation: scaleIn 5s linear;
+}
+
+@-webkit-keyframes scaleIn {
+    0% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+html, body { height: 100%; }

@@ -1,0 +1,21 @@
+.template2 {
+	justify-content: center;
+	align-items: center;
+	padding: 10px 10%;
+}
+
+.template2 .content{
+	flex-basis: 40%;
+	padding: 30px;
+}
+
+@media (max-width: 800px){
+	.template2 .content{
+		flex-basis: 100%;
+		padding: 5px;
+	}
+
+	.template2 {
+		padding: 10px 5px;
+	}
+}

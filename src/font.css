@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'font1';
+  src: url('/assets/fonts/font1.woff2') format("opentype");
+}
+
+@font-face {
+  font-family: 'font2';
+  src: url('/assets/fonts/font2.otf') format("opentype");
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: speener;
+  src: url('https://fast.fonts.net/dv2/14/012beb29-0e69-4b4a-92b7-0327ef26befd.woff2?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4');
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  src: local('Karla'), local('Karla-Light'), url(https://fonts.gstatic.com/s/karla/v6/qkBbXvYC6trAT7RbLtyG5Q.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  src: local('Karla'), local('Karla-Light'), url(https://fonts.gstatic.com/s/karla/v6/qkBbXvYC6trAT7RVLtw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

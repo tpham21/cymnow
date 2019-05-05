@@ -1,0 +1,43 @@
+.card2{
+	position: relative; 
+	height: 100%;
+}
+
+.card2 .text-container{
+	padding: 10px;
+	height: 100%;
+	background-color: rgb(250,250,250);
+}
+
+.card2 .image-container{
+	position: relative;
+	overflow: hidden;
+}
+
+.card2 .image-container img{
+	width: 100%;
+	display: block;
+	filter: brightness(70%);
+	object-fit: cover;
+}
+
+.card2 .image-container .image-content{
+	position: absolute; 
+	top:0%;
+	width: 100%;
+}
+
+.card2 .image-container .image-content .column-flex{
+	padding: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card2:hover .image-container img{
+	transform: scale(1.15);
+	filter: brightness(100%);
+}
+
+.card2 .image-container img{
+	transition: all 0.3s;
+}

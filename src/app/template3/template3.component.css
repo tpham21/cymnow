@@ -1,0 +1,60 @@
+.template3{
+	position: relative;
+	height:100vh;
+}
+
+.template3 .video{
+}
+
+.template3 .video video{
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+    background-size: cover;
+    transition: 1s opacity;
+    position: fixed;
+}
+
+.template3 .container{
+	position:absolute;
+	background: none;
+	top: 0px;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+}
+
+.template3 .content{
+	flex-basis: 100%;
+	margin: 5%;
+	padding: 5px;
+	height: 80%;
+	transition: opacity 0.5s ease-out;
+	justify-content: center;
+	align-items: center;
+}
+
+.template3 .content .title, .template3 .content .button, .template3 .content .description{
+	text-align:center;
+} 
+
+
+@media (max-width: 1024px) {
+    .template3 .content{
+		margin: 10%;
+	}
+
+	.template3{
+		position: relative;
+		height:100%;
+	}
+
+	.template3 .video video{
+		min-width:0%;
+		min-height: 0%;
+		width:100%;
+		height:100%;
+		position: relative;
+	}
+}

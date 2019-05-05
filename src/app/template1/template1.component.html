@@ -1,0 +1,12 @@
+<div class="parallax" [ngStyle]="template.style">
+	<div class="container row-flex">
+		<div class="column-flex content">
+			<div *ngIf="template.title" class="title" [ngStyle]="template.title.style">
+				{{template.title.text}}
+			</div>	
+			<div *ngIf="template.description" class="description" [ngStyle]="template.description.style">
+				{{template.description.text}}
+			</div>	
+		</div>
+	</div>
+</div>

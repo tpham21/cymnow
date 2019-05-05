@@ -1,0 +1,19 @@
+<div *ngIf="template.header" class="row-flex header"  [ngStyle]="template.header.style">
+	{{template.header.text}}
+</div>
+<div class="template5">
+		<div class="container row-flex">
+			<div class="cover"></div>
+		</div>
+		<div class="content">
+			<div class="empty-flex">
+			</div>
+			<div class="card-container" horizontal-scroll>
+				<div class="card-content">
+					<div *ngFor="let temp of template.cards; let i= index" class="card-component">
+						<card2 [template] = "temp" ></card2>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

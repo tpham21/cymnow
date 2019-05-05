@@ -1,0 +1,31 @@
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax .container{
+	background-color: rgba(0, 0, 0, 0.2);
+    min-height: 100vh; 
+}
+
+.parallax .content{
+	flex-basis: 50%;
+	padding: 50px;
+	justify-content: center;
+	align-items: center;
+	min-height:100px;
+}
+
+
+
+@media (max-width: 800px) {
+   .parallax .content{
+		flex-basis:100%;
+		padding:10px;
+	}
+
+}
+
+

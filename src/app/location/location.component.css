@@ -1,0 +1,170 @@
+.location{
+	position: relative;
+	overflow: hidden;
+	padding: 10px 0;
+}
+
+.location .container{
+	min-height: 500px;
+}
+
+
+.location .container .cover{
+	flex-basis: 30%;
+	min-width: 500px;
+	background: #96daf0;  /* fallback for old browsers */	
+}
+
+.location .content{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	align-items: center;
+	display:flex;
+	flex-direction: row;
+}
+
+.location .empty-flex{
+	flex: 1 0 350px;
+	text-align: center;
+}
+
+.location .card{
+	overflow: hidden;
+	position: relative;
+	height: 400px;
+	width: 100%;
+	align-items: center;
+}
+
+.location .card .card-container{
+	position:absolute;
+	top: 0px;
+	height: 100%;
+	width:80%;
+	overflow:hidden;
+}
+
+.location .card .card-content{
+	position: relative;
+	overflow:hidden;
+}
+
+.location .card .background{
+	height: 400px;
+}
+
+
+.location .card .background img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.location .overlay{
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.location .overlay-content{
+	flex-basis: 100%;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.location .overlay .info-content{
+	flex: 1 0 50%;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.location .overlay .map{
+	flex: 1 0 50%;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.header{
+	justify-content: center;
+	align-items: center;
+	font-size: 20px !important;
+	padding: 20px;
+}
+
+.location .overlay .map img{
+	width: 80%;
+	height: 80%;
+	object-fit: contain;
+}
+
+.location .selected{
+	display:block !important;
+	animation-fill-mode: forwards;
+}
+
+.location .deselect{
+	display:none;
+}
+
+.location .overlay .info-content .title{
+	font-size: 150px !important;
+	letter-spacing: 10px !important;
+}
+@media(max-width:812px){
+	.location .container{
+		display: none;
+	}
+
+	.location .content{
+		flex-wrap: wrap;
+		background: #96daf0;
+		position: relative;
+	}
+
+	.location .empty-flex, .location .card{
+		flex-basis: 100%;
+	}
+
+
+	.location .empty-flex div{
+		margin: 5% 2px;
+	}
+
+	.location .card .card-container{
+		width: 100%;
+	}
+
+	.location .card, .location .card .background{
+		height: 500px;
+	}
+	/*.location .overlay .info-content{
+		position: absolute;
+		top: 10%;
+		right:10%;
+		justify-content: flex-end;
+	}*/
+	.location .overlay .map{
+		order: 1;
+		flex: 1 0 100%;
+		height: auto;
+	}
+
+	.location .overlay .info-content .title{
+		font-size: 50px !important;
+		letter-spacing: 5px !important;
+		word-wrap: break-word;
+	}
+
+	.header{
+		font-size: 16px !important;
+	}
+
+}

@@ -1,0 +1,21 @@
+<div class="row-flex info2">
+	<div class= "left container">
+		<div class="content" [ngStyle] = "template.style">
+			<header1 *ngIf="template.header" [template]="template.header" class="header"></header1>
+			<div *ngIf="template.title" class="title" [ngStyle]="template.title.style">{{template.title.text}}</div>
+			<div *ngIf="template.description" class="description" [ngStyle]="template.description.style">{{template.description.text}}</div>
+			<button1 *ngIf="template.button" [template]="template.button"></button1>	
+		</div>
+	</div>
+
+	<div class="right row-flex">
+		<div class="container" *ngFor="let temp of template.contents">
+			<div class="column-flex content"  [ngStyle]="temp.style">
+				<header1 *ngIf="temp.header" [template]="temp.header" class="header"></header1>
+				<div *ngIf="temp.title" class="title" [ngStyle]="temp.title.style">{{temp.title.text}}</div>
+				<div *ngIf="temp.description" class="description" [ngStyle]="temp.description.style">{{temp.description.text}}</div>
+				<button1 *ngIf="temp.button" [template]="temp.button"></button1>
+			</div>
+		</div>
+	</div>
+</div>

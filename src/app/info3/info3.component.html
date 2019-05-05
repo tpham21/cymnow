@@ -1,0 +1,10 @@
+<div class="column-flex info3" [ngStyle] = "template.style">
+	<div class="column-flex container">
+			<div class="sub-content">
+				<div class="description" [ngStyle] = "template.description.style">{{template.description.text}}</div>
+				<button1 *ngIf="template.button" [template]="template.button"></button1>
+				<br>
+				<hr>
+			</div>
+	</div>
+</div>

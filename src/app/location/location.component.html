@@ -1,0 +1,31 @@
+<div *ngIf="template.header" class="row-flex header"  [ngStyle]="template.header.style">
+	{{template.header.text}}
+</div>
+
+<div class="location">
+	<div class="container row-flex">
+		<div class="cover"></div>
+	</div>
+	<div class="content">
+		<div class="empty-flex">
+			
+		</div>
+		<div class="card row-flex">
+			<div class="card-container row-flex deselect" *ngFor="let temp of template.cards; let i= index">
+				<div class="card-content">
+					<div class="background"> <img src={{temp.image}}> </div>
+					<div class="overlay row-flex">
+						<div class="overlay-content row-flex">
+							<div class="info-content column-flex">
+								<header1 *ngIf="temp.header" [template]="temp.header" class="header deselect"></header1>
+								<div *ngIf="temp.title" class="title deselect" [ngStyle] = "temp.title.style">{{temp.title.text}}</div>
+								<div *ngIf="temp.description" class="description deselect" [ngStyle] = "temp.description.style">{{temp.description.text}}</div>
+								<button1 *ngIf="temp.button" [template]="temp.button"></button1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

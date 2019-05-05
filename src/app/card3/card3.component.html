@@ -1,0 +1,17 @@
+<div class="card3" id="card3">
+	<div class="container deselect" *ngFor="let temp of template; let i= index">
+		<div class="content">
+			<div class="image-content">
+				<img src={{temp.image}}>
+			</div>
+			<div class="info-container row-flex animated fadeIn delay-1">
+				<div class="info-content column-flex">
+					<header1 *ngIf="temp.header" [template]="temp.header" class="header deselect"></header1>
+					<div *ngIf="temp.title" class="title deselect" [ngStyle] = "temp.title.style">{{temp.title.text}}</div>
+					<div *ngIf="temp.description" class="description deselect" [ngStyle] = "temp.description.style">{{temp.description.text}}</div>
+					<button1 *ngIf="temp.button" [template]="temp.button"></button1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+.info2{
+	
+}
+.info2 .left{
+	flex-basis: 50%;
+	overflow-y: hidden;
+}
+
+.info2 .left .content{
+	padding: 50px;
+	height: 100%;
+}
+
+
+.info2 .right{
+	flex-basis: 50%;
+	justify-content: center;
+	align-items: center;
+}
+
+.info2 .right .content{
+	flex-basis: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+}
+
+.info2 .right .container{
+	flex-basis: 50%;
+} 
+
+.info2 .right, .info2 .right .header, .info2 .right .title, .info2 .right .description{
+	text-align: center;
+}
+
+@media(max-width: 1024px){
+	.info2 .left{
+		flex-basis: 100%;
+	}
+
+	.info2 .right{
+		flex-basis: 100%;
+	}
+}

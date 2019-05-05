@@ -1,0 +1,15 @@
+<div class="template3">
+	<div class="video">
+		<video autoplay muted>
+			 <source src="assets/imgs/cymnow.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="container row-flex">
+		<div class="content column-flex">
+			<header1 *ngIf="template.header" [template]="template.header" class="header"></header1>
+			<div *ngIf="template.title" class="title" [ngStyle]="template.title.style">{{template.title.text}}</div>
+			<div *ngIf="template.description" class="description" [ngStyle]="template.description.style">{{template.description.text}}</div>
+			<button1 *ngIf="template.button" [template]="template.button"></button1>
+		</div>
+	</div>
+</div>

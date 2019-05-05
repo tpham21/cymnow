@@ -1,0 +1,30 @@
+<div class="template4 row-flex">
+		<div class="container">
+			<div class="column-flex">
+				<div *ngFor="let temp of template; let i= index">
+					<div class="content"  *ngIf="i%3==0">
+						<card2 [template] = "temp"></card2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="column-flex">
+				<div *ngFor="let temp of template; let i= index">
+					<div class="content"  *ngIf="i%3==1">
+						<card2 [template] = "temp"></card2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="column-flex">
+				<div *ngFor="let temp of template; let i= index">
+					<div class="content"  *ngIf="i%3==2">
+						<card2 [template] = "temp"></card2>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

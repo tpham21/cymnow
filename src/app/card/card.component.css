@@ -1,0 +1,53 @@
+.card{
+	position: relative;
+}
+
+.card .image{
+}
+
+.card .image img{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+
+.card .container{
+	position:absolute;
+	background: none;
+	top: 0px;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+}
+
+.card .content{
+	flex-basis: 100%;
+	margin: 5%;
+	padding: 5px;
+	background-color: rgb(250, 250, 250);
+	height: 80%;
+	transition: opacity 0.5s ease-out;
+	justify-content: center;
+	align-items: center;
+	opacity:0;
+}
+
+.card .content .title, .card .content .button, .card .content .description{
+	text-align:center;
+} 
+
+.card:hover .content{
+	opacity: 1;
+} 
+
+@media (max-width: 800px) {
+   .card{
+   		flex-basis: 100%;
+   }
+
+   .card .content{
+		margin: 10%;
+	}
+
+}
