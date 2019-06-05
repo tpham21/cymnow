@@ -5,6 +5,10 @@ body{
 	margin:0px !important;
 }
 
+.mat-step-label, .mat-step-label-selected{
+    font-size: 16px !important;
+}
+
 .flex-empty{
 	width:100%;
 }

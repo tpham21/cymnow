@@ -1,0 +1,108 @@
+<div class="row-flex">
+	<div *ngFor="let structure of structures" class="structure-container" [ngStyle]="{'flex-basis': (structure.flex?structure.flex:'100%')}">
+		<!-- LABEL -->
+		<div *ngIf="structure.type=='label'" class="type-container">
+			<div class="mat-subheading-2">{{structure.label}}</div>
+		</div>
+
+		<!-- BUTTON -->
+		<div *ngIf="structure.type=='button'" class="type-container">
+			<button mat-button>{{structure.label}}</button>
+		</div>
+
+		<!-- CHECKBOX GROUP-->
+		<div *ngIf="structure.type=='checkbox-group'" class="type-container">
+			<mat-label>{{structure.label}}</mat-label>
+			<div class="row-flex" >
+				<mat-checkbox *ngFor="let item of structure.fields; index as i;" class="radio-button">{{item}}</mat-checkbox>
+			</div>
+		</div>
+
+		<!-- CHECKBOX-->
+		<div *ngIf="structure.type=='checkbox'" class="type-container">
+			<mat-checkbox>{{structure.label}}</mat-checkbox>
+		</div>
+
+		<!-- RADIO BUTTON -->
+		<div *ngIf="structure.type=='radio'" class="type-container">
+			<mat-label>{{structure.label}}</mat-label>
+			<mat-radio-group class="row-flex">
+				<mat-radio-button *ngFor="let item of structure.fields; index as i;" value="{{item}}" class="radio-button">{{item}}</mat-radio-button>
+			</mat-radio-group>
+		</div>
+
+		<!-- DROP DOWN -->
+		<mat-form-field *ngIf="structure.type=='dropdown'" class="type-container">
+			<mat-label>{{structure.label}}</mat-label>
+			<mat-select>
+				<mat-option *ngFor="let item of structure.fields; index as i;" value="{{item}}" [value]="item">
+				{{item}}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+
+		<!-- TEXTAREA -->
+		<mat-form-field *ngIf="structure.type=='textarea'" class="type-container">
+			<mat-label style="white-space: normal;">{{structure.label}}</mat-label>
+			<textarea matInput
+				  	cdkTextareaAutosize
+				    #autosize="cdkTextareaAutosize"
+				    cdkAutosizeMinRows="1"
+				    cdkAutosizeMaxRows="7"></textarea>
+		</mat-form-field>
+
+		<!-- INPUT -->
+		<mat-form-field *ngIf="structure.type=='input'" class="type-container">
+			<input matInput placeholder="{{structure.label}}">
+		</mat-form-field>
+
+		<!--DATE -->
+		<mat-form-field *ngIf="structure.type=='date'" class="type-container">
+		  <input matInput [matDatepicker]="picker" placeholder="{{structure.label}}">
+		  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+		  <mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+
+		<!-- TIME -->
+		<mat-form-field *ngIf="structure.type=='time'" class="type-container">
+	    	<input matInput type="time" placeholder="{{structure.label}}">
+	  </mat-form-field>
+
+
+		<!-- STEPPER -->
+		<mat-horizontal-stepper *ngIf="structure.type=='stepper' && structure.style!='vertical'" class="type-container" [linear]="structure.linear" #stepper class="type-container">
+			<mat-step *ngFor="let item of structure.fields; index as i;">
+				<form >
+			      <ng-template matStepLabel>{{structure.label[i]}}</ng-template>
+			      <div>
+			      	<form-template [structures]="item" [model]="model[structure.name[i]]"></form-template>
+			      </div>
+			      <div>
+      				<button mat-button matStepperPrevious *ngIf="i>0">Back</button>
+			        <button mat-button matStepperNext *ngIf="i<structure.fields.length-1">Next</button>
+			      </div>
+			    </form>
+			</mat-step>
+		</mat-horizontal-stepper>
+
+		<!-- STEPPER -->
+		<mat-vertical-stepper *ngIf="structure.type=='stepper' && structure.style=='vertical'" class="type-container" [linear]="structure.linear" #stepper class="type-container">
+			<mat-step *ngFor="let item of structure.fields; index as i;">
+			    <form >
+			      <ng-template matStepLabel class="mat-step-label">{{structure.label[i]}}</ng-template>
+			      <div>
+			      	<form-template [structures]="item" [model]="model[structure.name[i]]"></form-template>
+			      </div>
+			      <div>
+      				<button mat-button matStepperPrevious *ngIf="i>0">Back</button>
+			        <button mat-button matStepperNext *ngIf="i<structure.fields.length-1">Next</button>
+			      </div>
+			    </form>
+			</mat-step>
+		</mat-vertical-stepper>
+
+
+		<!-- INPUT -->
+		<mat-divider *ngIf="structure.type=='divider'" class="type-container"></mat-divider>
+	</div>
+</div>

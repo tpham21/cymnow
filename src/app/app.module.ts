@@ -24,9 +24,26 @@ import { ServiceOfferComponent } from './service-offer/service-offer.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ToolbarHeaderComponent } from './toolbar-header/toolbar-header.component';
 import { FaqComponent } from './faq/faq.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatIconModule, 
+         MatButtonModule,
+         MatCheckboxModule,
+         MatDividerModule,
+         MatRadioModule,
+         MatInputModule,
+         MatStepperModule,
+         MatSelectModule,
+         MatDatepickerModule,
+         MatNativeDateModule
+       } from '@angular/material';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { FormTemplateComponent } from './form-template/form-template.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 @NgModule({
   declarations: [
@@ -51,15 +68,32 @@ import {MatDividerModule} from '@angular/material/divider';
     ServiceOfferComponent,
     IntroductionComponent,
     ToolbarHeaderComponent,
-    FaqComponent
+    FaqComponent,
+    HomeComponent,
+    FormTemplateComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatDividerModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatDividerModule,
+    MatRadioModule,
+    MatInputModule,
+    MatStepperModule,
+    MatSelectModule,
+    NgxMaterialTimepickerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

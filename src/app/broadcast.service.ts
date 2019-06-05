@@ -13,7 +13,6 @@ export class BroadcastService {
 
   register(channelName:string){
   	 if(!this.channels[channelName]){
-  	 	console.log("Im in here");
   	 	this.channels[channelName] = { "source": new Subject<string>()};
   	 	this.channels[channelName]['observable'] = this.channels[channelName]['source'].asObservable();
   	 	this.channels[channelName]['announce'] = function(val:any){

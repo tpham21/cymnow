@@ -16,7 +16,6 @@ export class Card2Component implements OnInit {
   							(Array.isArray(this.template)?
   								(this.template.length?this.template[0]:{}):
   							this.template);
-  	console.log(this.selectedTemplate);
   	if(Array.isArray(this.template) && this.template.length>1){
   		let indx = 1;
   		setInterval(()=>{

@@ -1,0 +1,12 @@
+.type-container, .structure-container{
+	width: 100%;
+}
+
+.radio-button, .structure-container{
+	padding:10px 20px;
+}
+
+textarea.mat-input-element {
+  padding: 0px 0;
+  margin: 6px 0;
+}
